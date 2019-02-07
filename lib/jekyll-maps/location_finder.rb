@@ -76,12 +76,16 @@ module Jekyll
       def match_filters?(doc)
         @options[:filters].each do |filter, value|
           if filter == "src"
-            return true unless doc.respond_to?(:relative_path)
-            return false unless doc.relative_path.start_with?(value)
+            if doc.respond_to?(:relative_path)
+              if doc.relative_path.start_with?(value)
+                return false
+              end
+            end
           elsif doc[filter].nil? || doc[filter] != value
             return false
           end
         end
+        return true
       end
 
       private
