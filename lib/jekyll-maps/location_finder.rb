@@ -119,7 +119,7 @@ module Jekyll
           :image      => location["image"] || document["image"] || "",
           :popup_html => location["marker_popup_html"] \
                          || document["marker_popup_html"] || "",
-          :marker_options => location["marker_options"] || {}
+          :marker_options => location["marker_options"] || {"hi" => "there"}
         }
       end
 
