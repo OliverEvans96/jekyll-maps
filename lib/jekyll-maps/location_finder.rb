@@ -30,7 +30,7 @@ module Jekyll
           :url        => @options[:attributes][:marker_url] || fetch_url(page),
           :image      => @options[:attributes][:marker_img] || page["image"] || "",
           :popup_html => @options[:attributes][:marker_popup_html] || "",
-          :marker_options => @options[:attributes][:marker_options] || {"hi" => "there"}
+          :marker_options => @options[:attributes][:marker_options]
         }
       end
 
@@ -118,7 +118,8 @@ module Jekyll
           :url_text   => location["url_text"],
           :image      => location["image"] || document["image"] || "",
           :popup_html => location["marker_popup_html"] \
-                         || document["marker_popup_html"] || ""
+                         || document["marker_popup_html"] || "",
+          :marker_options => location["marker_options"] || {}
         }
       end
 
