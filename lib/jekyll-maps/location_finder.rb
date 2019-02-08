@@ -28,7 +28,8 @@ module Jekyll
           :icon       => @options[:attributes][:marker_icon] || page["marker_icon"],
           :url        => @options[:attributes][:marker_url] || fetch_url(page),
           :image      => @options[:attributes][:marker_img] || page["image"] || "",
-          :popup_html => @options[:attributes][:marker_popup_html] || ""
+          :popup_html => @options[:attributes][:marker_popup_html] || "",
+          :marker_options => @options[:attributes][:marker_options] || {}
         }
       end
 
