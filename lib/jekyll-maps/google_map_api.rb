@@ -39,7 +39,8 @@ HTML
         private
         def load_marker_with_label
           <<HTML
-<script async defer src='http://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.js'></script>
+<script async defer src='http://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.js'
+        onload='#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.testMarkerWithLabel()'></script>
 HTML
         end
 
