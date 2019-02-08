@@ -32,14 +32,14 @@ HTML
             .fetch("google", {})
             .fetch("api_key", "")
           <<HTML
-<script async defer src='https://maps.googleapis.com/maps/api/js?key=#{api_key}&callback=#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeMap'></script>
+<script src='https://maps.googleapis.com/maps/api/js?key=#{api_key}&callback=#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeMap'></script>
 HTML
         end
 
         private
         def load_marker_with_label
           <<HTML
-<script async defer src='http://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.js'
+<script src='http://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.js'
         onload='#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.testMarkerWithLabel()'></script>
 HTML
         end
@@ -51,7 +51,7 @@ HTML
             .fetch("marker_cluster", {})
           return unless settings.fetch("enabled", true)
           <<HTML
-<script async defer src='https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/src/markerclusterer.js'
+<script src='https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/src/markerclusterer.js'
         onload='#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeCluster(#{settings.to_json})'></script>
 HTML
         end
