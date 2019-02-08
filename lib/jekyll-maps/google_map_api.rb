@@ -21,6 +21,7 @@ module Jekyll
   #{js_lib_contents}
 </script>
 #{load_google_maps_api}
+#{load_marker_with_label}
 #{load_marker_cluster}
 HTML
         end
@@ -32,7 +33,13 @@ HTML
             .fetch("api_key", "")
           <<HTML
 <script async defer src='https://maps.googleapis.com/maps/api/js?key=#{api_key}&callback=#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeMap'></script>
-<script src='http://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.js'></script>
+HTML
+        end
+
+        private
+        def load_marker_with_label
+          <<HTML
+<script async defer src='http://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.js'></script>
 HTML
         end
 
