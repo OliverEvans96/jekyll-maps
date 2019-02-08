@@ -120,8 +120,7 @@ module Jekyll
           :popup_html => location["marker_popup_html"] \
                          || document["marker_popup_html"] || "",
           :marker_options => location["marker_options"] \
-                             || document["marker_options"] \
-                             || {"hi" => "there"}
+                             || document["marker_options"] || {}
         }
       end
 
