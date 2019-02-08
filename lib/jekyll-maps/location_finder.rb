@@ -21,6 +21,7 @@ module Jekyll
 
       private
       def location_from_options(page)
+        puts "MARKER OPTIONS: " + @options[:attributes][:marker_options].to_s
         {
           :latitude   => @options[:attributes][:latitude],
           :longitude  => @options[:attributes][:longitude],
