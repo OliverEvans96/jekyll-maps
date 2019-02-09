@@ -35,7 +35,7 @@ HTML
                       .fetch("google", {})
                       .fetch("map_options", {})
           <<HTML
-<script src='https://maps.googleapis.com/maps/api/js?key=#{api_key}&callback=#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeMap(#{JSON.generate(map_options)})'></script><p>HI</p>
+<script src='https://maps.googleapis.com/maps/api/js?key=#{api_key}&callback=#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeMap(#{JSON.generate(map_options)})></script><p>HI</p>
 HTML
         end
 
