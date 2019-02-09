@@ -34,11 +34,9 @@ HTML
           map_options = @config.fetch("maps", {})
                       .fetch("google", {})
                       .fetch("map_options", {})
-          ret = <<HTML
-<script src='https://maps.googleapis.com/maps/api/js?key=#{api_key}&callback=#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeMap(#{JSON.generate(map_options)})'></script>
+          <<HTML
+<script src='https://maps.googleapis.com/maps/api/js?key=#{api_key}&callback=#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeMap(#{JSON.generate(map_options)})'></script><p>HI</p>
 HTML
-          puts "HTML SCRIPT: " + String(ret)
-          return ret
         end
 
         private
