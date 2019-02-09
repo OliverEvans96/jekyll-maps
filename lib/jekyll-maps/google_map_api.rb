@@ -35,7 +35,8 @@ HTML
                       .fetch("google", {})
                       .fetch("map_options", {})
           <<HTML
-<script src='https://maps.googleapis.com/maps/api/js?key=#{api_key}&callback=#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeMap(#{JSON.generate(map_options)})></script>
+<script src='https://maps.googleapis.com/maps/api/js?key=#{api_key}'
+        onload='#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeMap(#{JSON.generate(map_options)})'></script>
 HTML
         end
 
@@ -54,7 +55,7 @@ HTML
           return unless settings.fetch("enabled", true)
           <<HTML
 <script src='https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/src/markerclusterer.js'
-        Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeCluster(#{settings.to_json})'></script>
+        onload='#{Jekyll::Maps::GoogleMapTag::JS_LIB_NAME}.initializeCluster(#{settings.to_json})'></script>
 HTML
         end
 
