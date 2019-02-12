@@ -43,7 +43,7 @@ HTML
         private
         def load_marker_with_label
           <<HTML
-<script src='http://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.js'></script>
+<script src='https://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.js'></script>
 HTML
         end
 
